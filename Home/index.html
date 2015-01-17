@@ -6,6 +6,10 @@
     <!-- Styles -->
     <link href="../Styles/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="../Styles/Site.css" rel="stylesheet" type="text/css" />
+    <!-- JQuery -->
+    <script type="text/javascript" src="../Scripts/Jquery/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../Scripts/Home/index.js"></script>
+    <script type="text/javascript" src="../Scripts/Home/cadastro.js"></script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -21,9 +25,11 @@
     <div class="container body-content">
         <!-- Cadastrar -->
         <form id="formCadastrar">
-            <h2>...</h2>
-            <!--
+            <h2>Cadastrar - Cliente</h2>
+            
                 <div class="form-horizontal">
+
+                <div id="divMensagem" class="divMensagemClass"></div>
 
                 <div class="form-group">
                     <label class="control-label col-md-2" for="txtNome">Nome</label>
@@ -43,6 +49,7 @@
                     <label class="control-label col-md-2" for="txtCep">Cep</label>
                     <div class="col-md-2">
                         <input class="form-control text-box single-line" id="txtCep" type="text" />
+                        <img id="imgLoading" src="../Images/loading.gif" class="hide">
                     </div>
                 </div>
 
@@ -86,11 +93,10 @@
 
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
-                        <input type="button" value="Cadastrar" class="btn btn-primary" />
+                        <input type="button" value="Cadastrar" class="btn btn-primary" onclick="onCadastrarClick();" />
                     </div>
                 </div>
             </div>
-                -->
 
         </form>
         <form id="formListar">
@@ -102,7 +108,7 @@
 
         <hr />
         <footer>
-            <p>&copy; - My Jquery Application</p>
+            <p> <label id="lblAno"></label> &copy; - My Jquery Application</p>
         </footer>
     </div>
 </body>
